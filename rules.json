@@ -1,0 +1,16 @@
+[
+  {
+      "id": 1,
+      "priority": 1,
+      "action": {
+          "type": "redirect",
+          "redirect": {
+              "extensionPath": "/pdf.worker.js"
+          }
+      },
+      "condition": {
+          "urlFilter": "https://www.studydrive.net/js/pdfviewer/pdf.worker.js",
+          "resourceTypes": ["script"]
+      }
+  }
+]

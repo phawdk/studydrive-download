@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "StudydriveDownload",
+  "version": "1.0",
+  "description": "Adds a download button to the top of the Page.",
+  "permissions": [
+      "declarativeNetRequest",
+      "storage"
+  ],
+  "host_permissions": [
+      "https://www.studydrive.net/*"
+  ],
+  "declarative_net_request": {
+      "rule_resources": [{
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules.json"
+      }]
+  },
+  "web_accessible_resources": [
+      {
+          "resources": ["pdf.worker.js"],
+          "matches": ["https://www.studydrive.net/*"]
+      }
+  ],
+  "browser_specific_settings": {
+      "gecko": {
+          "id": "studydrive-download@example.com"
+      }
+  }
+}

@@ -2,13 +2,20 @@
 
 This extension adds a download button to the top of the Studydrive page.
 
+#### Status:
+
+✔️ Working as of 28 June 2024.
+
+
+If you encounter any issues or something doesn't work as expected, please create an issue to help us address it promptly.
+
 ## Installation Instructions
 
 ### Chrome
 
 1. Clone or download this repository:
     ```bash
-    git clone https://github.com/yourusername/StudydriveDownload.git
+    git clone https://github.com/phawdk/studydrive-download.git
     ```
    Or download the ZIP file and extract it.
 
@@ -22,13 +29,14 @@ This extension adds a download button to the top of the Studydrive page.
 
 1. Clone or download this repository:
     ```bash
-    git clone https://github.com/yourusername/StudydriveDownload.git
+    git clone https://github.com/phawdk/studydrive-download.git
     ```
    Or download the ZIP file and extract it.
 
 2. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
 
 3. Click on "Load Temporary Add-on" and select the `manifest.json` file from the repository folder.
+   Note: This temporary add-on will last until the browser is closed.
 
 ## Contribution
 

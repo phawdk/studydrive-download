@@ -8848,41 +8848,48 @@ var NetworkManager = (function NetworkManagerClosure() {
 
       xhr.onload = () => {
         try  {
-          let el = document.getElementById("fuckinghellidfuckthisshitimout");
+          const _id = "jsA7AGx6o2Yi61DvK8iooXEeQtgnKR";
+          
+          let el = document.getElementById(_id);
           if (el) {
-            el.remove()
+            el.remove();
           }
 
           let blob = new Blob([xhr.response], { type: 'application/pdf' });
           let url = URL.createObjectURL(blob);
-          let m = window.location.href.match(/doc\/([^\/]+)/)
+          let m = window.location.href.match(/doc\/([^\/]+)/);
           let name = "sd-download.pdf";
           if (m && m[1]) {
-            name = m[1] + ".pdf"
+            name = m[1] + ".pdf";
           }
-          let container = document.createElement("div")
 
-          container.style = "display:flex;margin:1rem auto;width:fit-content; gap: 1rem;"
-          container.id = "fuckinghellidfuckthisshitimout"
+          const btn_css = "padding:1rem;background:lightblue;border-radius:1rem;";
+          const btn_title = "Depending on the browser settings this might open and or download the file";
+
+          let container = document.createElement("div");
+          container.style = "display:flex;margin:1rem auto;width:fit-content; gap: 1rem;";
+          container.id = _id;
+
           let link = document.createElement('a');
           link.href = url;
-          link.textContent = "Download"
-          link.style = "padding:1rem;background:lightblue;border-radius:1rem;"
+          link.textContent = "Download";
+          link.style = btn_css;
           link.download = name;
-          container.appendChild(link)
+          link.title = btn_title;
+          container.appendChild(link);
 
           let link2 = document.createElement('a');
           link2.href = url;
-          link2.textContent = "Open"
-          link2.target = "_blank"
-          link2.style = "padding:1rem;background:lightblue;border-radius:1rem;"
-          container.appendChild(link2)
+          link2.textContent = "Open";
+          link2.target = "_blank";
+          link2.style = btn_css;
+          link2.title = btn_title;
+          container.appendChild(link2);
 
           document.body.insertBefore(container, document.body.firstChild);
-
           
         } catch (e) {
-          console.error(e)
+          console.error(e);
         }
       }
       xhr.send(null);

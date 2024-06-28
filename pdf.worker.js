@@ -8856,11 +8856,9 @@ var NetworkManager = (function NetworkManagerClosure() {
           let blob = new Blob([xhr.response], { type: 'application/pdf' });
           let url = URL.createObjectURL(blob);
           let m = window.location.href.match(/doc\/([^\/]+)/)
-          let name = m[1];
-          if (name) {
-            name = name + ".pdf"
-          } else {
-            name = "sd-download.pdf"
+          let name = "sd-download.pdf";
+          if (m && m[1]) {
+            name = m[1] + ".pdf"
           }
           let container = document.createElement("div")
 

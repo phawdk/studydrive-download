@@ -4,7 +4,7 @@ This extension adds a download button to the top of the Studydrive page.
 
 #### Status:
 
-✔️ Working as of 28 June 2024.
+✔️ Working as of July 09, 2024
 
 
 If you encounter any issues or something doesn't work as expected, please create an issue to help us address it promptly.

@@ -4,14 +4,14 @@ This extension adds a download button to the top of the Studydrive page.
 
 #### Status:
 
-✔️ Working as of July 09, 2024
+✔️ Working as of July 31, 2024
 
 
-If you encounter any issues or something doesn't work as expected, please create an issue to help us address it promptly.
+If you encounter any issues or if something doesn't work as expected, or if you have any feedback, please create an issue so we can address it promptly.
 
 ## Installation Instructions
 
-### Chrome
+### Chrome (and Other Chromium-Based Browsers)
 
 1. Clone or download this repository:
     ```bash
@@ -19,11 +19,14 @@ If you encounter any issues or something doesn't work as expected, please create
     ```
    Or download the ZIP file and extract it.
 
-2. Open Chrome and navigate to `chrome://extensions/`.
+2. Open Chrome (or your Chromium-based browser) and navigate to `chrome://extensions/`.
 
 3. Enable "Developer mode" by toggling the switch in the top right corner.
 
-4. Click on "Load unpacked" and select the folder where the repository is cloned or extracted.
+4. Select the option to "Load unpacked" and choose the folder where the repository is cloned or extracted.
+
+**Note:** These steps are very similar for other Chromium-based browsers like Microsoft Edge, Brave, or Opera. You may just need to navigate to the corresponding extensions page (e.g., `edge://extensions/` for Edge). Depending on the browser, the buttons may be located elsewhere on the page.
+
 
 ### Firefox
 

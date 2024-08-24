@@ -1,13 +1,12 @@
 # StudydriveDownload Extension
 
-This extension adds a download button to the top of the Studydrive page.
+This extension adds a download button to the top of the Studydrive page which allows you to download any PDF on Studydrive.
 
 #### Status:
 
-✔️ Working as of July 31, 2024
+✔️ Working as of August 24, 2024
 
-
-If you encounter any issues or if something doesn't work as expected, or if you have any feedback, please create an issue so we can address it promptly.
+If you encounter any issues or if something doesn't work as expected, or if you have any feedback, please create an issue.
 
 ## Installation Instructions
 
@@ -39,7 +38,8 @@ If you encounter any issues or if something doesn't work as expected, or if you 
 2. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
 
 3. Click on "Load Temporary Add-on" and select the `manifest.json` file from the repository folder.
-   Note: This temporary add-on will last until the browser is closed.
+
+**Note:**  This temporary Firefox add-on will last until the browser is closed.
 
 ## Contribution
 

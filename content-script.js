@@ -1,6 +1,6 @@
 (() => {
-  premium_read_count = 0;
-  user_proxy_handler = {
+  let premium_read_count = 0;
+  const user_proxy_handler = {
     get(target, prop, receiver) {
       if (prop === "is_premium") {
         premium_read_count++;

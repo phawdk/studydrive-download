@@ -8847,51 +8847,48 @@ var NetworkManager = (function NetworkManagerClosure() {
       pendingRequest.onProgress = args.onProgress;
 
       xhr.onload = () => {
-        try  {
+        try {
           const _id = "jsA7AGx6o2Yi61DvK8iooXEeQtgnKR";
-          
+
           let el = document.getElementById(_id);
           if (el) {
             el.remove();
           }
 
-          let blob = new Blob([xhr.response], { type: 'application/pdf' });
+          let blob = new Blob([xhr.response], { type: "application/pdf" });
           let url = URL.createObjectURL(blob);
           let m = window.location.href.match(/doc\/([^\/]+)/);
-          let name = "sd-download.pdf";
+          let name = "studydrive-download.pdf";
           if (m && m[1]) {
             name = m[1] + ".pdf";
           }
 
-          const btn_css = "padding:1rem;background:lightblue;border-radius:1rem;";
-          const btn_title = "Depending on the browser settings this might open and or download the file";
+          const btn_title =
+            "Depending on the browser settings this might open and or download the file";
+
+          const mk_btn = (label, options) => {
+            let btn = document.createElement("a");
+            btn.href = url;
+            btn.classList.add("button-85");
+            btn.role = "button";
+            btn.title = btn_title;
+            btn.textContent = label;
+
+            if (options?.download) btn.download = name;
+            if (options?.target) btn.target = options.target;
+
+            return btn;
+          };
 
           let container = document.createElement("div");
-          container.style = "display:flex;margin:1rem auto;width:fit-content; gap: 1rem;";
           container.id = _id;
-
-          let link = document.createElement('a');
-          link.href = url;
-          link.textContent = "Download";
-          link.style = btn_css;
-          link.download = name;
-          link.title = btn_title;
-          container.appendChild(link);
-
-          let link2 = document.createElement('a');
-          link2.href = url;
-          link2.textContent = "Open";
-          link2.target = "_blank";
-          link2.style = btn_css;
-          link2.title = btn_title;
-          container.appendChild(link2);
-
+          container.appendChild(mk_btn("Open", { target: "_blank" }));
+          container.appendChild(mk_btn("Download", { download: true }));
           document.body.insertBefore(container, document.body.firstChild);
-          
         } catch (e) {
           console.error(e);
         }
-      }
+      };
       xhr.send(null);
 
       return xhrId;

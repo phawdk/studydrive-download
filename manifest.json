@@ -3,29 +3,35 @@
   "name": "StudydriveDownload",
   "version": "1.0",
   "description": "Adds a download button to the top of the Page.",
-  "permissions": [
-      "declarativeNetRequest",
-      "storage"
-  ],
-  "host_permissions": [
-      "https://www.studydrive.net/*"
-  ],
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["https://www.studydrive.net/*"],
   "declarative_net_request": {
-      "rule_resources": [{
-          "id": "ruleset_1",
-          "enabled": true,
-          "path": "rules.json"
-      }]
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
   },
   "web_accessible_resources": [
-      {
-          "resources": ["pdf.worker.js"],
-          "matches": ["https://www.studydrive.net/*"]
-      }
+    {
+      "resources": ["pdf.worker.js"],
+      "matches": ["https://www.studydrive.net/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.studydrive.net/*"],
+      "css": ["main.css"],
+      "js": ["content-script.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
   ],
   "browser_specific_settings": {
-      "gecko": {
-          "id": "studydrive-download@example.com"
-      }
+    "gecko": {
+      "id": "studydrive-download@example.com"
+    }
   }
 }

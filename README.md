@@ -3,10 +3,12 @@
 This extension adds a download button to the top of the Studydrive page which allows you to download any PDF on Studydrive.
 
 #### Status:
-Currently patched, i will release an update soon.
-~✔️ Working as of August 24, 2024~
+✔️ Working as of September 4, 2024 <br>*Please update (just follow the Install instructions again)*
 
 If you encounter any issues or if something doesn't work as expected, or if you have any feedback, please create an issue.
+
+#### Patch history:
+- Sep 4, 2024: Patched URL block 
 
 ## Installation Instructions
 

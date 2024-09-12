@@ -3,23 +3,8 @@
   "name": "StudydriveDownload",
   "version": "1.0",
   "description": "Adds a download button to the top of the Page.",
-  "permissions": ["declarativeNetRequest", "storage"],
+  "permissions": ["storage"],
   "host_permissions": ["https://www.studydrive.net/*"],
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_1",
-        "enabled": true,
-        "path": "rules.json"
-      }
-    ]
-  },
-  "web_accessible_resources": [
-    {
-      "resources": ["pdf.worker.js"],
-      "matches": ["https://www.studydrive.net/*"]
-    }
-  ],
   "content_scripts": [
     {
       "matches": ["https://www.studydrive.net/*"],

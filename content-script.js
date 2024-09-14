@@ -26,18 +26,18 @@
 })();
 
 ((open) => {
-  XMLHttpRequest.prototype.open = function () {
-    this.addEventListener(
-      "load",
-      () => {
-        if (this.responseURL.match(/.*studydrive\.net\/file-preview/g)) {
+  XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+    if (url.match(/.*studydrive\.net\/file-preview/g)) {
+      this.addEventListener(
+        "load",
+        () => {
           let blob = new Blob([this.response], { type: "application/pdf" });
           let url = URL.createObjectURL(blob);
           addButtons(url);
-        }
-      },
-      false
-    );
+        },
+        false
+      );
+    }
     open.apply(this, arguments);
   };
 

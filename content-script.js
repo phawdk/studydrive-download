@@ -17,7 +17,15 @@
     {
       set(target, prop, value, receiver) {
         if (prop === "user") {
-          value = new Proxy(value, user_proxy_handler);
+          if (value && typeof value === 'object') {
+            value = new Proxy(value, user_proxy_handler);
+          } else {
+            console.warn(
+              "[SD-Download]: Non-object value assigned to user property: %o%c\nIf everything works as expected this can safely be ignored.",
+              value,
+              "color:grey;font-style:italic;"
+            );
+          }
         }
         return Reflect.set(target, prop, value, receiver);
       },

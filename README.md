@@ -8,6 +8,8 @@ This extension adds a download button to the top of the Studydrive page which al
 
 If you encounter any issues or if something doesn't work as expected, or if you have any feedback, please create an issue.
 
+**Note:** Login to a free studydrive account is required.
+
 #### Patch history:
 - Sep 4, 2024: Patched URL block 
 

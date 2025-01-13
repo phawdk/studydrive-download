@@ -3,7 +3,7 @@
 This extension adds a download button to the top of the Studydrive page which allows you to download any PDF on Studydrive.
 
 #### Status:
-🟢 Working as of January 4th, 2025
+🟢 Working as of January 13th, 2025
 <br>*There is no autoupdate, if it doesn't work for you, please reinstall*
 
 If you encounter any issues or if something doesn't work as expected, or if you have any feedback, please create an issue.
@@ -29,7 +29,8 @@ If you encounter any issues or if something doesn't work as expected, or if you 
 
 4. Select the option to "Load unpacked" and choose the folder where the repository is cloned or extracted.
 
-**Note:** These steps are very similar for other Chromium-based browsers like Microsoft Edge, Brave, or Opera. You may just need to navigate to the corresponding extensions page (e.g., `edge://extensions/` for Edge). Depending on the browser, the buttons may be located elsewhere on the page. If you see the message `Unrecognized manifest key 'browser_specific_settings'`, you can safely ignore it. This key is only used by Firefox and has no effect on Chrome or other Chromium-based browsers.
+**Note:** These steps are very similar for other Chromium-based browsers like Microsoft Edge, Brave, or Opera. You may just need to navigate to the corresponding extensions page (e.g., `edge://extensions/` for Edge). Depending on the browser, the buttons may be located elsewhere on the page.
+**Also Note:** If you see the message `Unrecognized manifest key 'browser_specific_settings'`, you can safely ignore it. This key is only used by Firefox and has no effect on Chrome or other Chromium-based browsers.
 
 
 ### Firefox

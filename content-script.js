@@ -1,12 +1,12 @@
 (() => {
-  let premium_read_count = 0;
+  // let premium_read_count = 0;
   const user_proxy_handler = {
     get(target, prop, receiver) {
       if (prop === "is_premium") {
-        premium_read_count++;
-        if (premium_read_count === 1) {
-          return true;
-        }
+        // premium_read_count++;
+        // if (premium_read_count === 1) {
+        return true;
+        // }
       }
       return Reflect.get(target, prop, receiver);
     },

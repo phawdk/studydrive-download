@@ -1,6 +1,7 @@
 # StudydriveDownload Extension
 
 This extension adds a download button to the top of the Studydrive page which allows you to download any PDF on Studydrive.
+As a side effect it also removes ads.
 
 #### Status:
 🟢 Working as of 4 February, 2025

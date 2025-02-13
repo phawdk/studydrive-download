@@ -4,7 +4,7 @@ This extension adds a download button to the top of the Studydrive page which al
 As a side effect it also removes ads.
 
 #### Status:
-🟢 Working as of 4 February, 2025
+🟢 Working as of 13 February, 2025
 <br>*There is no autoupdate, if it doesn't work for you, please reinstall*
 
 If you encounter any issues or if something doesn't work as expected, or if you have any feedback, please create an issue.

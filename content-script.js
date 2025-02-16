@@ -1,24 +1,26 @@
 (() => {
-  // let premium_read_count = 0;
-  const user_proxy_handler = {
+  // ==============================
+  // Exploit Prevention Bypass
+  // ==============================
+
+  /** @type {ProxyHandler<Object>} */
+  const UserProxYHandler = {
     get(target, prop, receiver) {
       if (prop === "is_premium") {
-        // premium_read_count++;
-        // if (premium_read_count === 1) {
         return true;
-        // }
       }
       return Reflect.get(target, prop, receiver);
     },
   };
 
+  //  @ts-ignore
   window.sdWindow = new Proxy(
     {},
     {
       set(target, prop, value, receiver) {
         if (prop === "user") {
-          if (value && typeof value === 'object') {
-            value = new Proxy(value, user_proxy_handler);
+          if (value && typeof value === "object") {
+            value = new Proxy(value, UserProxYHandler);
           } else {
             console.warn(
               "[SD-Download]: Non-object value assigned to user property: %o%c\nIf everything works as expected this can safely be ignored.",
@@ -31,9 +33,22 @@
       },
     }
   );
-})();
 
-((open) => {
+  // ==============================
+  // Main Functionality: Download Buttons
+  // ==============================
+
+  const originalOpen = XMLHttpRequest.prototype.open;
+  /**
+   * Overrides the default open method of XMLHttpRequest.
+   *
+   * @param {string} method
+   * @param {string} url - The URL to which the request is sent.
+   * @param {boolean} [async=true]
+   * @param {string} [user]
+   * @param {string} [password]
+   * @returns {void}
+   */
   XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
     if (url.match(/.*studydrive\.net\/file-preview/g)) {
       this.addEventListener(
@@ -46,32 +61,35 @@
         false
       );
     }
-    open.apply(this, arguments);
+    originalOpen.apply(this, arguments);
   };
 
+  /*** @param {string} url */
   const addButtons = (url) => {
-    const _id = "jsA7AGx6o2Yi61DvK8iooXEeQtgnKR";
+    const ID = "jsA7AGx6o2Yi61DvK8iooXEeQtgnKR";
 
-    let el = document.getElementById(_id);
-    if (el) {
-      el.remove();
-    }
+    document.getElementById(ID)?.remove();
 
-    let m = window.location.href.match(/doc\/([^\/]+)/);
-    let name = "studydrive-download.pdf";
-    if (m && m[1]) {
-      name = m[1] + ".pdf";
-    }
+    let match = window.location.href.match(/doc\/([^\/]+)/);
+    const name = match?.[1] ? `${match[1]}.pdf` : "studydrive-download.pdf";
 
-    const btn_title =
-      "Depending on the browser settings this might open and or download the file";
+    const ButtonTitle = "Depending on the browser settings this might open and or download the file";
 
-    const mk_btn = (label, options) => {
+    /**
+     * Creates a button element with specified label and options.
+     *
+     * @param {string} label - The text to display on the button.
+     * @param {Object} [options] - Optional settings for the button.
+     * @param {boolean} [options.download] - If true, sets the download attribute for the button.
+     * @param {string} [options.target] - Specifies where to open the linked document (e.g., "_blank").
+     * @returns {HTMLAnchorElement} The created button element.
+     */
+    const createButton = (label, options) => {
       let btn = document.createElement("a");
       btn.href = url;
       btn.classList.add("button-85");
       btn.role = "button";
-      btn.title = btn_title;
+      btn.title = ButtonTitle;
       btn.textContent = label;
 
       if (options?.download) btn.download = name;
@@ -81,9 +99,9 @@
     };
 
     let container = document.createElement("div");
-    container.id = _id;
-    container.appendChild(mk_btn("Open", { target: "_blank" }));
-    container.appendChild(mk_btn("Download", { download: true }));
+    container.id = ID;
+    container.appendChild(createButton("Open", { target: "_blank" }));
+    container.appendChild(createButton("Download", { download: true }));
     document.body.insertBefore(container, document.body.firstChild);
   };
-})(XMLHttpRequest.prototype.open);
+})();

@@ -2,8 +2,7 @@
   "manifest_version": 3,
   "name": "StudydriveDownload",
   "version": "1.0",
-  "description": "Adds a download button to the top of the Page.",
-  "permissions": ["storage"],
+  "description": "Adds a download button to the top of the Page and removes Ads",
   "host_permissions": ["https://www.studydrive.net/*"],
   "content_scripts": [
     {
@@ -13,10 +12,5 @@
       "run_at": "document_start",
       "world": "MAIN"
     }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "studydrive-download@example.com"
-    }
-  }
+  ]
 }

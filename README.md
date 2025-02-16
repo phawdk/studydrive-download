@@ -12,7 +12,7 @@ If you encounter any issues or if something doesn't work as expected, or if you 
 **Note:** Login to a free studydrive account is required.
 
 #### Patch history:
-- Sep 4, 2024: Patched URL block 
+- 4 Sep, 2024: Patched URL block 
 
 ## Installation Instructions
 

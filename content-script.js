@@ -4,7 +4,7 @@
   // ==============================
 
   /** @type {ProxyHandler<Object>} */
-  const UserProxYHandler = {
+  const UserProxyHandler = {
     get(target, prop, receiver) {
       if (prop === "is_premium") {
         return true;
@@ -20,7 +20,7 @@
       set(target, prop, value, receiver) {
         if (prop === "user") {
           if (value && typeof value === "object") {
-            value = new Proxy(value, UserProxYHandler);
+            value = new Proxy(value, UserProxyHandler);
           } else {
             console.warn(
               "[SD-Download]: Non-object value assigned to user property: %o%c\nIf everything works as expected this can safely be ignored.",

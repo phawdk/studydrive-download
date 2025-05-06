@@ -39,16 +39,7 @@
   // ==============================
 
   const originalOpen = XMLHttpRequest.prototype.open;
-  /**
-   * Overrides the default open method of XMLHttpRequest.
-   *
-   * @param {string} method
-   * @param {string} url - The URL to which the request is sent.
-   * @param {boolean} [async=true]
-   * @param {string} [user]
-   * @param {string} [password]
-   * @returns {void}
-   */
+
   XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
     if (url.match(/.*studydrive\.net\/file-preview/g)) {
       this.addEventListener(
@@ -62,6 +53,22 @@
       );
     }
     originalOpen.apply(this, arguments);
+  };
+
+  let originalFetch = window.fetch;
+
+  window.fetch = async (input, init) => {
+    const url = typeof input === 'string' ? input : input instanceof Request ? input.url : '';
+    const response = await originalFetch(input, init);
+  
+    if (url.match(/.*studydrive\.net\/file-preview/g)) {
+      const clonedResponse = response.clone();
+      let blob = new Blob([await clonedResponse.arrayBuffer()], { type: "application/pdf" });
+      let url = URL.createObjectURL(blob);
+      addButtons(url);
+    }
+
+    return response;
   };
 
   /*** @param {string} url */

@@ -4,6 +4,7 @@
   "version": "1.0.1",
   "description": "Adds a download button to the top of the Page and removes Ads",
   "host_permissions": ["https://www.studydrive.net/*"],
+  "homepage_url": "https://github.com/phawdk/studydrive-download",
   "content_scripts": [
     {
       "matches": ["https://www.studydrive.net/*"],

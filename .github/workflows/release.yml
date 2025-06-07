@@ -7,6 +7,10 @@ on:
         description: 'Version to publish (e.g., 1.2.3)'
         required: true
         type: string
+      changelog:
+        description: 'Optional changelog or notes for this release'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -49,3 +53,7 @@ jobs:
             👉 Look for **${{ env.ZIP_FILE }}** in the Assets section.
             
             ⚠️ *Ignore the auto-generated "Source code" downloads — those are for developers only.*
+
+            
+            📝 **Changelog:**
+            ${{ github.event.inputs.changelog || 'No changelog provided.' }}

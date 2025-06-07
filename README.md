@@ -43,7 +43,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 
 1. Download the latest release ZIP file from the [Releases page](../../releases/latest).
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
-3. Click **"Load Temporary Add-on"** and select the `manifest.json` file inside the extracted folder.
+3. Click **"Load Temporary Add-on"** and select the `StudydriveDownload-phawdk-[version].zip` file.
 
 ⚠️ Firefox will unload the extension when the browser is closed.
 

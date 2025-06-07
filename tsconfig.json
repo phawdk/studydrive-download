@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "lib": ["dom", "es6"],
+    "types": ["chrome", "firefox-webext-browser"],
+  },
+  "include": ["src/**/*"]
+}

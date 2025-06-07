@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "StudydriveDownload",
   "version": "0.0.1",
-  "description": "Adds a download button to the top of the Page and removes Ads",
+  "description": "Adds a download button to the top of the Page and removes Ads, also allows downloads with all comments of a document.",
   "host_permissions": ["https://www.studydrive.net/*"],
   "homepage_url": "https://github.com/phawdk/studydrive-download",
   "permissions": ["notifications"],

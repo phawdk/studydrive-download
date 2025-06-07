@@ -1,0 +1,51 @@
+name: Manual Build & Release Extension
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish (e.g., 1.2.3)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ github.event.inputs.version }}
+      ZIP_FILE: StudydriveDownload-phawdk-${{ github.event.inputs.version }}.zip
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with version
+        run: npm run build
+
+      - name: Zip build output
+        run: |
+          cd dist
+          zip -r ../$ZIP_FILE .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: v${{ env.VERSION }}
+          files: ${{ env.ZIP_FILE }}
+          body: |
+            🚀 Download the browser extension below:
+            👉 Look for **${{ env.ZIP_FILE }}** in the Assets section.
+            
+            ⚠️ *Ignore the auto-generated "Source code" downloads — those are for developers only.*

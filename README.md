@@ -29,7 +29,8 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 ### 🧭 Chrome / Edge / Brave / Chromium
 
 1. Download the latest release ZIP file from the [Releases page](../../releases/latest).
-2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`, etc.) or navigate to `Manage Extensions`.
+2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`, etc.)  
+   or navigate to Three Dots > `Extensions` > `Manage Extensions` or Extensions Icon > `Manage Extensions`.
 3. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
 4. **Drag and drop the ZIP file** directly onto the extensions page,  
    or click **“Load unpacked”** and select the downloaded zip file (`StudydriveDownload-phawdk-[version].zip`).

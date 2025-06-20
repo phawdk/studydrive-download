@@ -52,9 +52,4 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 
 ## 🤝 Contribution
 
-Contributions are welcome! To contribute:
-
-1. Fork this repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b my-feature
+Contributions are welcome! Feel free to fork the repository and submit your changes.

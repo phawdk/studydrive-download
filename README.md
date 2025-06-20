@@ -7,7 +7,7 @@ As a side effect, it also removes ads.
 It now enables you to download a specific file along with all comments displayed on the side of the page. 📥💬
 
 #### Status:
-🟢 Working as of 16 June, 2025  
+🟢 Working as of 20 June, 2025  
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](../../issues).
@@ -32,7 +32,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`, etc.) or navigate to `Manage Extensions`.
 3. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
 4. **Drag and drop the ZIP file** directly onto the extensions page,  
-   or click **“Load unpacked”** and select the extracted folder.
+   or click **“Load unpacked”** and select the downloaded zip file (`StudydriveDownload-phawdk-[version].zip`).
 
 
 ✔️ The extension will be installed and ready to use.

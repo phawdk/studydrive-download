@@ -29,7 +29,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 ### 🧭 Chrome / Edge / Brave / Chromium
 
 **🚨 Important Update on Installation Process! 🚨**  
-The installation process has changed. Users now need to download the ZIP file from the Releases page instead of downloading the entire repository. If you attempt to load the extension without following this new method, you may encounter the error: **"Manifest file is missing or unreadable."**
+The installation process has changed. Users now need to download the ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest) instead of downloading the entire repository. If you attempt to load the extension without following this new method, you may encounter the error: **"Manifest file is missing or unreadable."**
 
 1. Download the latest release ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
 2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`, etc.)  

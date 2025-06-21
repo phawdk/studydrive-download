@@ -7,10 +7,10 @@ As a side effect, it also removes ads.
 It now enables you to download a specific file along with all comments displayed on the side of the page. 📥💬
 
 #### Status:
-🟢 Working as of 20 June, 2025  
+🟢 Working as of 21 June, 2025  
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
-If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](../../issues).
+If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).
 
 ![Demo of the extension](data/demo.gif)
 
@@ -28,7 +28,10 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 
 ### 🧭 Chrome / Edge / Brave / Chromium
 
-1. Download the latest release ZIP file from the [Releases page](../../releases/latest).
+**🚨 Important Update on Installation Process! 🚨**  
+The installation process has changed. Users now need to download the ZIP file from the Releases page instead of downloading the entire repository. If you attempt to load the extension without following this new method, you may encounter the error: **"Manifest file is missing or unreadable."**
+
+1. Download the latest release ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
 2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`, etc.)  
    or navigate to Three Dots > `Extensions` > `Manage Extensions` or Extensions Icon > `Manage Extensions`.
 3. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
@@ -42,7 +45,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 
 ### 🦊 Firefox
 
-1. Download the latest release ZIP file from the [Releases page](../../releases/latest).
+1. Download the latest release ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox` or navigate to `Addons and Themes` > Settings Icon > `Debug Add-ons`.
 3. Click **"Load Temporary Add-on"** and select the `StudydriveDownload-phawdk-[version].zip` file.
 

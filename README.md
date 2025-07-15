@@ -7,7 +7,7 @@ As a side effect, it also removes ads.
 It now enables you to download a specific file along with all comments displayed on the side of the page. 📥💬
 
 #### Status:
-🟢 Working as of 27 June, 2025  
+🟢 Working as of 15 July, 2025  
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).

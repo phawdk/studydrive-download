@@ -1,24 +1,24 @@
 # StudydriveDownload Extension
 
-This extension adds a download button to the top of the Studydrive page which allows you to download any PDF on Studydrive with the option to also include all comments.  
-As a side effect, it also removes ads.
+Allows you to download PDF files from Studydrive. (The download button is in the extension Popup)
 
-✨ **Exciting Update!** ✨  
-It now enables you to download a specific file along with all comments displayed on the side of the page. 📥💬
+~✨ **Exciting Update!** ✨  
+It now enables you to download a specific file along with all comments displayed on the side of the page. 📥💬~
+^^currently not supported
 
 #### Status:
-🔴 NOT Working as of 22 July, 2025 (studydrive just pushed an update blocking this)
+🟢 Working as of 23 July, 2025
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).
 
-![Demo of the extension](data/demo.gif)
 
 #### Note:
 - A free Studydrive account is required (login needed).
 - Only currently displayed files can be downloaded (Anki cards etc. is not supported).
 
 #### Patch history:
+- 23 July, 2025: Fix Active block
 - 6 May, 2025: Update to Fetch API
 - 4 Sep, 2024: Patched URL block
 

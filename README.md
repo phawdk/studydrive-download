@@ -1,10 +1,6 @@
 # StudydriveDownload Extension
 
-Allows you to download PDF files from Studydrive. (The download button is in the extension Popup)
-
-~✨ **Exciting Update!** ✨  
-It now enables you to download a specific file along with all comments displayed on the side of the page. 📥💬~
-^^currently not supported
+Allows you to download PDF files from Studydrive for free. (The download button is in the extension Popup)
 
 #### Status:
 🟢 Working as of 23 July, 2025 <br>
@@ -12,6 +8,7 @@ It now enables you to download a specific file along with all comments displayed
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).
 
+![Demo](/data/demo.jpg)
 
 #### Note:
 - A free Studydrive account is required (login needed).

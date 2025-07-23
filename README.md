@@ -30,9 +30,10 @@ The installation process has changed. Users now need to download the ZIP file fr
 
 1. Download the latest release ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
 2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`, etc.)  
-   or navigate to Three Dots > `Extensions` > `Manage Extensions` or Extensions Icon > `Manage Extensions`.
-3. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
-4. **Drag and drop the ZIP file** directly onto the extensions page,  
+   or navigate to Three Dots > `Extensions` > `Manage Extensions`  
+   or Extensions Icon > `Manage Extensions`.
+4. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
+5. **Drag and drop the ZIP file** directly onto the extensions page,  
    or click **“Load unpacked”** and select the downloaded zip file (`StudydriveDownload-phawdk-[version].zip`).
 
 

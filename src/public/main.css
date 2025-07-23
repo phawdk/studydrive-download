@@ -1,0 +1,39 @@
+:root {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  width: 400px;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.filelist > * {
+  align-items: center;
+  margin-bottom: 1em;
+  display: flex;
+  padding: 1em;
+  border: 2px solid white;
+  border-radius: 1em;
+  gap: 1em;
+}
+
+
+.filelist > * :first-child {
+  flex: 1;
+}
+
+
+.filelist a,
+.links a {
+  background-color: white;
+  color: black;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  text-decoration: none;
+}
+.links {
+  display: flex;
+  gap: 1em;
+}

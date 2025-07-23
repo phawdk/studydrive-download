@@ -14,7 +14,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 - A free Studydrive account is required (login needed).
 - Only currently displayed files can be downloaded (Anki cards etc. is not supported).
 
-#### Patch history:
+#### Patch history (cat and mouse game moments):
 - 23 July, 2025: Fix Active block
 - 6 May, 2025: Update to Fetch API
 - 4 Sep, 2024: Patched URL block
@@ -38,10 +38,11 @@ The installation process has changed. Users now need to download the ZIP file fr
 
 ✔️ The extension will be installed and ready to use.
 
----
 
 ### 🦊 Firefox
+
 Firefox Support is currently suspended. Note that even if I would add it again, its very user unfriendly to use as debug extensions are unloaded when you close firefox. If you are interested in Firefox support, please let me know.
+
 ---
 
 ## 🤝 Contribution

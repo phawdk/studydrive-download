@@ -41,13 +41,7 @@ The installation process has changed. Users now need to download the ZIP file fr
 ---
 
 ### 🦊 Firefox
-
-1. Download the latest release ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
-2. Open Firefox and go to `about:debugging#/runtime/this-firefox` or navigate to `Addons and Themes` > Settings Icon > `Debug Add-ons`.
-3. Click **"Load Temporary Add-on"** and select the `StudydriveDownload-phawdk-[version].zip` file.
-
-⚠️ Firefox will unload the extension when the browser is closed.
-
+Firefox Support is currently suspended. Note that even if I would add it again, its very user unfriendly to use as debug extensions are unloaded when you close firefox. If you are interested in Firefox support, please let me know.
 ---
 
 ## 🤝 Contribution

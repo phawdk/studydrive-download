@@ -42,7 +42,7 @@ The installation process has changed. Users now need to download the ZIP file fr
 
 ### 🦊 Firefox
 
-Firefox Support is currently suspended. Note that even if I would add it again, its very user unfriendly to use as debug extensions are unloaded when you close firefox. If you are interested in Firefox support, please let me know.
+Firefox Support is currently suspended. Note that even if I would add it again, its very user unfriendly to use as debug extensions are unloaded when you close firefox. If you are interested in Firefox support, please let me know. Let's use this issue here: [#19](https://github.com/phawdk/studydrive-download/issues/19)
 
 ---
 

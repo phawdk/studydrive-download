@@ -3,7 +3,8 @@
 Allows you to download PDF files from Studydrive for free. (The download button is in the extension Popup)
 
 #### Status:
-🟢 Working as of 25 July, 2025 <br>
+🟢 Working as of 29 July, 2025
+<br>
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).
@@ -25,9 +26,6 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 
 ### 🧭 Chrome / Edge / Brave / Chromium
 
-**🚨 Important Update on Installation Process! 🚨**  
-The installation process has changed. Users now need to download the ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest) instead of downloading the entire repository. If you attempt to load the extension without following this new method, you may encounter the error: **"Manifest file is missing or unreadable."**
-
 1. Download the latest release ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
 2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`, etc.)  
    or navigate to Three Dots > `Extensions` > `Manage Extensions`  
@@ -39,6 +37,8 @@ The installation process has changed. Users now need to download the ZIP file fr
 
 ✔️ The extension will be installed and ready to use.
 
+**🚨 Important Update on Installation Process! 🚨**  
+The installation process has changed. Users now need to download the ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest) instead of downloading the entire repository. If you attempt to load the extension without following this new method, you may encounter the error: **"Manifest file is missing or unreadable."**
 
 ### 🦊 Firefox
 

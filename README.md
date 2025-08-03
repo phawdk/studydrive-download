@@ -3,7 +3,7 @@
 Allows you to download PDF files from Studydrive for free. (The download button is in the extension Popup)
 
 #### Status:
-🟢 Working as of 29 July, 2025
+🟢 Working as of 3 August, 2025
 <br>
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
@@ -49,3 +49,4 @@ Firefox Support is currently suspended. Note that even if I would add it again, 
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+

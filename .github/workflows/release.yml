@@ -20,7 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VERSION: ${{ github.event.inputs.version }}
-      ZIP_FILE: StudydriveDownload-phawdk-${{ github.event.inputs.version }}.zip
+      CHROME_ZIP_FILE: StudydriveDownload-phawdk-chrome-${{ github.event.inputs.version }}.zip
+      FIREFOX_ZIP_FILE: StudydriveDownload-phawdk-firefox-${{ github.event.inputs.version }}.zip
 
     steps:
       - name: Checkout code
@@ -34,26 +35,33 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with version
-        run: npm run build
+      - name: Build Chrome extension
+        run: npm run build:chrome
 
-      - name: Zip build output
-        run: |
-          cd dist
-          zip -r ../$ZIP_FILE .
+      - name: Zip Chrome build output
+        run: zip -r $CHROME_ZIP_FILE dist/*
+
+      - name: Build Firefox extension
+        run: npm run build:firefox
+
+      - name: Zip Firefox build output
+        run: zip -r $FIREFOX_ZIP_FILE dist/*
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ env.VERSION }}
-          name: v${{ env.VERSION }}
-          files: ${{ env.ZIP_FILE }}
+          name: v${{ env.VERSION }} (Chrome & Firefox)
+          files: ${{ env.CHROME_ZIP_FILE }}, ${{ env.FIREFOX_ZIP_FILE }}
           body: |
-            🚀 Download the browser extension below:
-            👉 Look for **${{ env.ZIP_FILE }}** in the Assets section.
+            🚀 Download the browser extensions below:
+            👉 Look for **${{ env.CHROME_ZIP_FILE }}** and **${{ env.FIREFOX_ZIP_FILE }}** in the Assets section.
             
-            ⚠️ *Ignore the auto-generated "Source code" downloads — those are for developers only.*
+            🔔 **Note**: Please download the matching version for your browser.
+            Examples of Chromium based Browsers: Google Chrome, Microsoft Edge, Brave, Opera
 
+
+            ⚠️ *Ignore the auto-generated "Source code" downloads — those are for developers only.*
             
             📝 **Changelog:**
             ${{ github.event.inputs.changelog || 'No changelog provided.' }}

@@ -1,6 +1,6 @@
 # StudydriveDownload Extension
 
-Allows you to download PDF files from Studydrive for free. (The download button is in the extension Popup)
+Allows you to download PDF files from Studydrive for free. It also blocks their Ads. (The download button is in the extension Popup)
 
 #### Status:
 🟢 Working as of 8 August, 2025
@@ -56,4 +56,5 @@ The extension will now be loaded temporarily in Firefox. Note that it will be re
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+
 

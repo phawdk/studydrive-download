@@ -55,7 +55,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ env.VERSION }}
-          name: v${{ env.VERSION }} (Chrome & Firefox)
+          name: v${{ env.VERSION }}
           files: ${{ env.CHROME_ZIP_FILE }}, ${{ env.FIREFOX_ZIP_FILE }}
           body: |
             🚀 Download the browser extensions below:

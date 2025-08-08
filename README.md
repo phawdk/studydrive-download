@@ -41,22 +41,21 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 **🚨 Important Update on Installation Process! 🚨**  
 The installation process has changed. Users now need to download the ZIP file from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest) instead of downloading the entire repository. If you attempt to load the extension without following this new method, you may encounter the error: **"Manifest file is missing or unreadable."**
 
+
 ### 🦊 Firefox
 
-1. **Download the latest release ZIP file** from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
-2. **Open Firefox** and type `about:debugging#/runtime/this-firefox` in the address bar, then press **Enter**.
-3. Click on **"This Firefox"** in the left sidebar.
-4. Click on the **"Load Temporary Add-on"** button.
-5. **Select the downloaded ZIP file** (`StudydriveDownload-phawdk-firefox-[version].zip`) from your file explorer. 
+1. Download the latest release ZIP file from the [Releases page](../../releases/latest).
+2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
+3. Click **"Load Temporary Add-on"** and select the `StudydriveDownload-phawdk-[version].zip` file.
 
-The extension will now be loaded temporarily in Firefox. Note that it will be removed when you restart the browser. For a permanent installation, you would need to package it as a WebExtension.
-
+⚠️ Firefox will unload the extension when the browser is closed.
 
 ---
 
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+
 
 
 

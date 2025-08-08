@@ -5,16 +5,15 @@
   "description": "This extension adds a download button to the top of the Studydrive page which allows you to download any PDF on Studydrive.\r As a side effect it also removes ads.",
   "main": "content-script.js",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "cross-env NODE_ENV=DEV rollup -c -w"
+    "build:chrome": "cross-env BROWSER_TARGET=CHROME rollup -c",
+    "dev:chrome": "cross-env BROWSER_TARGET=CHROME NODE_ENV=DEV rollup -c -w",
+    "build:firefox": "cross-env BROWSER_TARGET=FIREFOX rollup -c",
+    "dev:firefox": "cross-env BROWSER_TARGET=FIREFOX NODE_ENV=DEV rollup -c -w"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.3",
-    "@rollup/plugin-image": "^3.0.3",
-    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
@@ -23,11 +22,7 @@
     "cross-env": "^7.0.3",
     "rollup": "^4.41.1",
     "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-delete": "^3.0.1",
-    "typescript": "^5.8.3",
-    "vuex": "^4.1.0"
+    "rollup-plugin-delete": "^3.0.1"
   },
-  "dependencies": {
-    "pdf-lib": "^1.17.1"
-  }
+  "dependencies": {}
 }

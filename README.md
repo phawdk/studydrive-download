@@ -1,13 +1,11 @@
 # StudydriveDownload Extension
+
 Allows you to download PDF files from Studydrive for free. (The download button is in the extension Popup)
 
-Trusted by a growing community of active users. <a href="https://tooomm.github.io/github-release-stats/?username=phawdk&repository=studydrive-download" target="_blank">View download count</a>
-
-
-**Status**: 🟢 Working as of 6 August, 2025
+#### Status:
+🟢 Working as of 29 July, 2025
 <br>
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
-
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).
 
@@ -51,7 +49,3 @@ Firefox Support is currently suspended. Note that even if I would add it again, 
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
-
-
-
-

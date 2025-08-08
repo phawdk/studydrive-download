@@ -1,10 +1,11 @@
-import { GET_ALL_PDF_TYPE, GetPdfsReply, Pdf, UpdateMessage } from "./shared";
+import { GET_ALL_PDF_TYPE, GetPdfsReply, Pdf, UpdateMessage, api } from "./shared";
+
 
 const file = (pdf: Pdf) => {
   return `<div><span>${pdf.name}</span><a href="${pdf.url}" target="_blank">Open</a><a href="${pdf.url}" target="_blank" download=${pdf.name}>Download</a></div>`;
 };
 
-chrome.runtime.sendMessage({ type: GET_ALL_PDF_TYPE }, async (pdfs: GetPdfsReply) => {
+api.runtime.sendMessage({ type: GET_ALL_PDF_TYPE }, async (pdfs: GetPdfsReply) => {
   console.log("ALL PDFS", pdfs);
   let current = document.getElementById("current");
   if (!current) throw new Error("Could not find listelement");
@@ -19,7 +20,7 @@ chrome.runtime.sendMessage({ type: GET_ALL_PDF_TYPE }, async (pdfs: GetPdfsReply
   }
 });
 
-const port = chrome.runtime.connect();
+const port = api.runtime.connect();
 
 port.onMessage.addListener((msg: UpdateMessage) => {
   if (msg.isCurrent) {

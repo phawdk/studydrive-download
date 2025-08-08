@@ -16,7 +16,7 @@ const manifest = {
   name: "StudydriveDownload",
   version: VERSION,
   description:
-    "Adds a download button to the top of the Page. " + `(This is a ${IS_CHROME ? "Chrome" : "Firefox"} build)`,
+    "Adds a download button to the top of the Page. It also blocks Ads. " + `(This is a ${IS_CHROME ? "Chrome" : "Firefox"} build)`,
   host_permissions: ["https://www.studydrive.net/*"],
   homepage_url: "https://github.com/phawdk/studydrive-download",
   permissions: ["scripting", "storage"],
@@ -68,3 +68,4 @@ if (IS_CHROME) {
 }
 
 export default manifest;
+

@@ -39,13 +39,17 @@ jobs:
         run: npm run build:chrome
 
       - name: Zip Chrome build output
-        run: zip -r $CHROME_ZIP_FILE dist/*
+        run: |
+          cd dist
+          zip -r ../$CHROME_ZIP_FILE .
 
       - name: Build Firefox extension
         run: npm run build:firefox
 
       - name: Zip Firefox build output
-        run: zip -r $FIREFOX_ZIP_FILE dist/*
+        run: |
+          cd dist
+          zip -r ../$FIREFOX_ZIP_FILE .
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1

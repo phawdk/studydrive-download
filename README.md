@@ -3,7 +3,7 @@
 Allows you to download PDF files from Studydrive for free. (The download button is in the extension Popup)
 
 #### Status:
-🟢 Working as of 29 July, 2025
+🟢 Working as of 8 August, 2025
 <br>
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
@@ -32,7 +32,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
    or Extensions Icon > `Manage Extensions`.
 4. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
 5. **Drag and drop the ZIP file** directly onto the extensions page,  
-   or click **“Load unpacked”** and select the downloaded zip file (`StudydriveDownload-phawdk-[version].zip`).
+   or click **“Load unpacked”** and select the downloaded zip file (`StudydriveDownload-phawdk-chrome-[version].zip`).
 
 
 ✔️ The extension will be installed and ready to use.
@@ -42,10 +42,18 @@ The installation process has changed. Users now need to download the ZIP file fr
 
 ### 🦊 Firefox
 
-Firefox Support is currently suspended. Note that even if I would add it again, its very user unfriendly to use as debug extensions are unloaded when you close firefox. If you are interested in Firefox support, please let me know. Let's use this issue here: [#19](https://github.com/phawdk/studydrive-download/issues/19)
+1. **Download the latest release ZIP file** from the [Releases page](https://github.com/phawdk/studydrive-download/releases/latest).
+2. **Open Firefox** and type `about:debugging#/runtime/this-firefox` in the address bar, then press **Enter**.
+3. Click on **"This Firefox"** in the left sidebar.
+4. Click on the **"Load Temporary Add-on"** button.
+5. **Select the downloaded ZIP file** (`StudydriveDownload-phawdk-firefox-[version].zip`) from your file explorer. 
+
+The extension will now be loaded temporarily in Firefox. Note that it will be removed when you restart the browser. For a permanent installation, you would need to package it as a WebExtension.
+
 
 ---
 
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+

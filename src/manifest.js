@@ -11,30 +11,32 @@ const VERSION =
         hour12: false,
       })
       .replace(/:/g, ".");
+
+const ICONS = {
+      16: "icon16x16.png",
+      48: "icon48x48.png",
+      128: "icon128x128.png",
+    };
+const INJECT_URL = "https://www.studydrive.net/*";
+
 const manifest = {
   manifest_version: 3,
   name: "StudydriveDownload",
   version: VERSION,
   description:
-    "Adds a download button to the top of the Page. It also blocks Ads. " + `(This is a ${IS_CHROME ? "Chrome" : "Firefox"} build)`,
-  host_permissions: ["https://www.studydrive.net/*"],
+    "Adds a download button to the top of the Page. " + `(This is a ${IS_CHROME ? "Chrome" : "Firefox"} build)`,
+  host_permissions: [INJECT_URL],
   homepage_url: "https://github.com/phawdk/studydrive-download",
   permissions: ["scripting", "storage"],
-  web_accessible_resources: [
-    {
-      resources: ["test.html"],
-      matches: ["<all_urls>"],
-    },
-  ],
   content_scripts: [
     {
-      matches: ["https://www.studydrive.net/*"],
+      matches: [INJECT_URL],
       js: ["isolated-cs.js"],
       world: "ISOLATED",
       run_at: "document_start",
     },
     {
-      matches: ["https://www.studydrive.net/*"],
+      matches: [INJECT_URL],
       js: ["main-cs.js"],
       world: "MAIN",
       run_at: "document_start",
@@ -42,17 +44,9 @@ const manifest = {
   ],
   action: {
     default_popup: "popup.html",
-    default_icon: {
-      16: "icon16x16.png",
-      48: "icon48x48.png",
-      128: "icon128x128.png",
-    },
+    default_icon: ICONS,
   },
-  icons: {
-    16: "icon16x16.png",
-    48: "icon48x48.png",
-    128: "icon128x128.png",
-  },
+  icons: ICONS,
   background: IS_CHROME
     ? {
         service_worker: "background.js",
@@ -63,9 +57,8 @@ const manifest = {
 
 if (IS_CHROME) {
   manifest.externally_connectable = {
-    matches: ["https://www.studydrive.net/*"],
+    matches: [INJECT_URL],
   };
 }
 
 export default manifest;
-

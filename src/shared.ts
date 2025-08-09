@@ -4,6 +4,10 @@ export interface Pdf {
   url: string;
 }
 
+export interface StoragePdf {
+  [key: string]: Pdf;
+};
+
 export const NEWPDF_TYPE = "NEWPDF" as const;
 export interface NewPdf {
   type: typeof NEWPDF_TYPE;
@@ -36,7 +40,7 @@ export interface ScriptParams {
 
 export interface GetPdfsReply {
   currentPdf: Pdf;
-  otherPdfs: Pdf[];
+  otherPdfs: StoragePdf;
 }
 
 export interface UpdateMessage {

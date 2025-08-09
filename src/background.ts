@@ -1,4 +1,4 @@
-import { c, GetPdfsReply, Req, UpdateMessage, api, NewPdf } from "./shared.js";
+import { c, GetPdfsReply, Req, UpdateMessage, api, NewPdf, Pdf, StoragePdf } from "./shared.js";
 
 
 const handleMessage = async (request: Req, sender: chrome.runtime.MessageSender): Promise<any> => {
@@ -8,16 +8,16 @@ const handleMessage = async (request: Req, sender: chrome.runtime.MessageSender)
     /* cfg:firefox */
     case "NEWPDFBYTES":
       const url = URL.createObjectURL(new Blob([request.bytes], { type: "application/pdf" }));
-      const pdf = {
+      const pdf: Pdf = {
         name: request.name,
-        url
-      }  
-      request = request as any as NewPdf
-      request.pdf = pdf
+        url,
+      };
+      request = request as any as NewPdf;
+      request.pdf = pdf;
     /* endcfg */
     case "NEWPDF":
       let result = await api.storage.session.get(["pdfs"]);
-      const pdfs = result.pdfs || {};
+      const pdfs: StoragePdf = result.pdfs || {};
       if (!sender.tab?.id) {
         c.warn("Message received without tab id");
         return;
@@ -42,7 +42,7 @@ const handleMessage = async (request: Req, sender: chrome.runtime.MessageSender)
       try {
         const currentTabId = await getCurrentTabId();
         const result = await api.storage.session.get(["pdfs"]);
-        const pdfs = result.pdfs || {};
+        const pdfs: StoragePdf = result.pdfs || {};
         const currentPdf = pdfs[currentTabId!];
         if (currentTabId) delete pdfs[currentTabId];
         const response: GetPdfsReply = {
@@ -55,7 +55,7 @@ const handleMessage = async (request: Req, sender: chrome.runtime.MessageSender)
         c.error("Error handling GET_ALL_PDF_TYPE:", error);
       }
     default:
-      c.warn("Unhandled message", request)
+      c.warn("Unhandled message", request);
   }
 };
 
@@ -101,12 +101,18 @@ api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 
 const clearByTabId = async (tabId: number) => {
-  let result = (await api.storage.session.get(["pdfs"])) || {};
-  if (result.pdfs?.[tabId]) {
-    delete result.pdfs[tabId];
+  const pdfs: StoragePdf = (await api.storage.session.get(["pdfs"])).pdfs || {};
+  const pdf = pdfs[tabId];
+  if (pdf) {
+    delete pdfs[tabId];
 
-    api.storage.session.set({ pdfs: result.pdfs }, () => {
+    api.storage.session.set({ pdfs: pdfs.pdfs }, () => {
       c.log("Deleted for tabId", tabId);
     });
+    /* cfg:firefox */
+    URL.revokeObjectURL(pdf.url);
+    c.log("Revoked Object Url for", pdf.name)
+    /* endcfg */
+
   }
 };

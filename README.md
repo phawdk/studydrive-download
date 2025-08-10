@@ -4,7 +4,7 @@ Allows you to download PDF files from Studydrive for free. It also blocks their 
 
 Trusted by a growing community of active users. [(View download count)](https://tooomm.github.io/github-release-stats/?username=phawdk&repository=studydrive-download)
 
-**Status:** 🟢 Working as of 8 August, 2025
+**Status:** 🟢 Working as of 10 August, 2025
 <br>
 *There is no autoupdate. If it stops working, please reinstall the latest version from the Releases section.*
 
@@ -33,7 +33,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
    or Extensions Icon > `Manage Extensions`.
 4. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
 5. **Drag and drop the ZIP file** directly onto the extensions page,  
-   or click **“Load unpacked”** and select the downloaded zip file (`StudydriveDownload-phawdk-chrome-[version].zip`).
+   or click **“Load unpacked”** and select the downloaded and extracted zip file/folder (`StudydriveDownload-phawdk-chrome-[version]`).
 
 
 ✔️ The extension will be installed and ready to use.
@@ -55,6 +55,7 @@ The installation process has changed. Users now need to download the ZIP file fr
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+
 
 
 

@@ -58,14 +58,16 @@ jobs:
           name: v${{ env.VERSION }}
           files: ${{ env.CHROME_ZIP_FILE }}, ${{ env.FIREFOX_ZIP_FILE }}
           body: |
-            🚀 Download the browser extensions below:
-            👉 Look for **${{ env.CHROME_ZIP_FILE }}** and **${{ env.FIREFOX_ZIP_FILE }}** in the Assets section.
-            
-            🔔 **Note**: Please download the matching version for your browser.
-            Examples of Chromium based Browsers: Google Chrome, Microsoft Edge, Brave, Opera
+            ## 🚀 Download the browser extensions below:
+            > [!TIP]
+            > Look for **StudydriveDownload-phawdk-chrome-2.0.3.zip** and **StudydriveDownload-phawdk-firefox-2.0.3.zip** in the Assets section.
+
+            > [!NOTE]
+            > Please download the matching version for your browser.
+            > Examples of Chromium based Browsers: Google Chrome, Microsoft Edge, Brave, Opera
 
 
             ⚠️ *Ignore the auto-generated "Source code" downloads — those are for developers only.*
-            
+
             📝 **Changelog:**
             ${{ github.event.inputs.changelog || 'No changelog provided.' }}

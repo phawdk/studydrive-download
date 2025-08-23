@@ -1,15 +1,19 @@
 # StudydriveDownload Extension
 
-Allows you to download PDF files from Studydrive for free. It also blocks their Ads. (The download button is in the extension Popup)
+Allows you to download PDF files from Studydrive for free. It also blocks their Ads.
 
 Trusted by a growing community of active users. [(View download count)](https://tooomm.github.io/github-release-stats/?username=phawdk&repository=studydrive-download)
 
-**Status:** 🟢 Working as of 12 August, 2025\
+**Status:** 🟢 Working as of 23 August, 2025\
 *There is no autoupdate. If it stops working, please make sure you are using the [latest version](https://github.com/phawdk/studydrive-download/releases/latest).*
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).
 
 <br>
+<br>
+
+The download button on Studydrive has been replaced. You can also download the PDFs through the extension popup:
+
 <br>
 
 ![Demo](/data/demo.jpg)
@@ -36,7 +40,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 <br>
 
 > [!TIP]
-> If you want to use this extension on mobile, consider using the [Mises Browser](https://www.mises.site/), which supports Chrome extensions.
+> If you want to use this extension on mobile, consider using an "Extension Enabled Browser". For example [the Mises Browser](https://www.mises.site/).
 <br>
 
 
@@ -71,6 +75,7 @@ If you encounter any issues, bugs, or have suggestions, feel free to [create an 
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+
 
 
 

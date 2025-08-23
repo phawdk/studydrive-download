@@ -27,7 +27,7 @@ const manifest = {
     "Adds a download button to the top of the Page. " + `(This is a ${IS_CHROME ? "Chrome" : "Firefox"} build)`,
   host_permissions: [INJECT_URL],
   homepage_url: "https://github.com/phawdk/studydrive-download",
-  permissions: ["scripting", "storage"],
+  permissions: ["scripting", "storage", "downloads"],
   content_scripts: [
     {
       matches: [INJECT_URL],
@@ -40,6 +40,12 @@ const manifest = {
       js: ["main-cs.js"],
       world: "MAIN",
       run_at: "document_start",
+    },
+        {
+      matches: [INJECT_URL],
+      js: ["content.js"],
+      world: "ISOLATED",
+      run_at: "document_end",
     },
   ],
   action: {

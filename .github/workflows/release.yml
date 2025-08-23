@@ -60,11 +60,11 @@ jobs:
           body: |
             ## 🚀 Download the browser extensions below:
             > [!TIP]
-            > Look for **StudydriveDownload-phawdk-chrome-2.0.3.zip** and **StudydriveDownload-phawdk-firefox-2.0.3.zip** in the Assets section.
+            > Look for **${{ env.CHROME_ZIP_FILE }}** and **${{ env.FIREFOX_ZIP_FILE }}** in the Assets section.
 
             > [!NOTE]
             > Please download the matching version for your browser.
-            > Examples of Chromium based Browsers: Google Chrome, Microsoft Edge, Brave, Opera
+            > Examples of Chromium(chrome) based Browsers: Google Chrome, Microsoft Edge, Brave, Opera
 
 
             ⚠️ *Ignore the auto-generated "Source code" downloads — those are for developers only.*

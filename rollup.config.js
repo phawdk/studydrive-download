@@ -51,7 +51,7 @@ export default defineConfig([
     },
   },
 
-  ...repeatConfig(["src/main-cs.ts", "src/popup.ts", "src/isolated-cs.ts"], {
+  ...repeatConfig(["src/main-cs.ts", "src/popup.ts", "src/isolated-cs.ts", "src/content.ts"], {
     output: [
       {
         dir: OUT_DIR,

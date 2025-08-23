@@ -1,5 +1,4 @@
-import { c, GetPdfsReply, Req, UpdateMessage, api, NewPdf, Pdf, StoragePdf } from "./shared.js";
-
+import { c, GetPdfsReply, Req, UpdateMessage, api, NewPdf, Pdf, StoragePdf, DownloadPdf } from "./shared.js";
 
 const handleMessage = async (request: Req, sender: chrome.runtime.MessageSender): Promise<any> => {
   c.log("Handle Message", request, sender);
@@ -54,6 +53,41 @@ const handleMessage = async (request: Req, sender: chrome.runtime.MessageSender)
       } catch (error) {
         c.error("Error handling GET_ALL_PDF_TYPE:", error);
       }
+    
+    case "GET_PDF_FOR_CURRENT_TAB": {
+      const tabId = sender.tab?.id;
+      if (tabId) {
+        const storage = await api.storage.session.get(["pdfs"]);
+        const allPdfs: StoragePdf = storage.pdfs || {};
+        return allPdfs[tabId];
+      }
+      return null;
+    }
+
+    case "DOWNLOAD_PDF": {
+      const pdfData = (request as DownloadPdf).pdf;
+      if (pdfData && pdfData.url) {
+        c.log("Received DOWNLOAD_PDF request. Starting download for:", pdfData.name);
+        api.downloads.download(
+          {
+            url: pdfData.url,
+            filename: pdfData.name,
+            saveAs: true,
+          },
+          (downloadId) => {
+            if (api.runtime.lastError) {
+              c.error("DOWNLOAD FAILED! Error:", api.runtime.lastError.message);
+            } else {
+              c.log("Download initiated successfully. ID:", downloadId);
+            }
+          }
+        );
+      } else {
+        c.warn("DOWNLOAD_PDF message received without a valid pdf.");
+      }
+      break;
+    }
+      
     default:
       c.warn("Unhandled message", request);
   }

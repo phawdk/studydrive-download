@@ -4,12 +4,11 @@ Allows you to download PDF files from Studydrive for free. It also blocks their 
 
 Trusted by a growing community of active users. [(View download count)](https://tooomm.github.io/github-release-stats/?username=phawdk&repository=studydrive-download)
 
-**Status:** 🟢 Working as of 27 August, 2025\
+**Status:** 🟢 Working as of 05 September, 2025\
 *There is no autoupdate. If it stops working, please make sure you are using the [latest version](https://github.com/phawdk/studydrive-download/releases/latest).*
 
 If you encounter any issues, bugs, or have suggestions, feel free to [create an issue](https://github.com/phawdk/studydrive-download/issues).
 
-<br>
 <br>
 
 The download button on Studydrive has been replaced. You can also download the PDFs through the extension popup:
@@ -75,6 +74,7 @@ The download button on Studydrive has been replaced. You can also download the P
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+
 
 
 

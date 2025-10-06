@@ -59,11 +59,8 @@ jobs:
           files: ${{ env.CHROME_ZIP_FILE }}, ${{ env.FIREFOX_ZIP_FILE }}
           body: |
             ## 🚀 Download the browser extensions below:
-            > [!TIP]
-            > Look for
-            > **${{ env.CHROME_ZIP_FILE }}** and
-            > **${{ env.FIREFOX_ZIP_FILE }}**
-            > in the Assets section.
+            
+            check the **installation instructions** in the [README](https://github.com/phawdk/studydrive-download/blob/main/README.md#-installation-instructions).
 
             > [!NOTE]
             > Please download the matching version for your browser.

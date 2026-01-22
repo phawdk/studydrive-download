@@ -30,7 +30,11 @@ const manifest = {
   permissions: ["scripting", "storage", "downloads"],
   browser_specific_settings: {
     gecko: {
-      id: "studydrive-download@phawdk.example"
+      id: "studydrive-download@phawdk.example",
+      data_collection_permissions: {
+        required: ["websiteActivity"],
+        optional: ["websiteContent"]
+      }
     }
   },
   content_scripts: [

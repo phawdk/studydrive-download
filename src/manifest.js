@@ -32,8 +32,8 @@ const manifest = {
     gecko: {
       id: "studydrive-download@phawdk.example",
       data_collection_permissions: {
-        required: ["websiteActivity"],
-        optional: ["websiteContent"]
+        required: [""],
+        optional: [""]
       }
     }
   },

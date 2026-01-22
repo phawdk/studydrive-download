@@ -46,10 +46,17 @@ jobs:
       - name: Build Firefox extension
         run: npm run build:firefox
 
-      - name: Zip Firefox build output
+      - name: Sign Firefox extension using web-ext
+        env:
+          JWT_ISSUER: ${{ secrets.JWT_ISSUER }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: |
-          cd dist
-          zip -r ../$FIREFOX_ZIP_FILE .
+          npx web-ext sign --channel=unlisted --api-key=$JWT_ISSUER --api-secret=$JWT_SECRET --source-dir=dist --artifacts-dir=./
+          
+      # - name: Zip Firefox build output
+      #   run: |
+      #     cd dist
+      #     zip -r ../$FIREFOX_ZIP_FILE .
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1

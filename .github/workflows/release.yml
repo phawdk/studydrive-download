@@ -53,11 +53,6 @@ jobs:
         run: |
           npx web-ext sign --channel=unlisted --api-key=$JWT_ISSUER --api-secret=$JWT_SECRET --source-dir=dist --artifacts-dir=./firefox-dist
           cp firefox-dist/*.xpi ./$FIREFOX_XPI_FILE
-          
-      # - name: Zip Firefox build output
-      #   run: |
-      #     cd dist
-      #     zip -r ../$FIREFOX_ZIP_FILE .
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1

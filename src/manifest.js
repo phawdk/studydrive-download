@@ -28,15 +28,6 @@ const manifest = {
   host_permissions: [INJECT_URL],
   homepage_url: "https://github.com/phawdk/studydrive-download",
   permissions: ["scripting", "storage", "downloads"],
-  browser_specific_settings: {
-    gecko: {
-      id: "studydrive-download@phawdk.example",
-      data_collection_permissions: {
-        required: [""],
-        optional: [""]
-      }
-    }
-  },
   content_scripts: [
     {
       matches: [INJECT_URL],

@@ -61,16 +61,12 @@ The download button on Studydrive has been replaced. You can also download the P
 
 ### 🦊 Firefox
 
-1. Click on the latest release XPI file from the [Releases page](../../releases/latest).
-2. This should trigger a pop-up in Firefox (top right) asking you to allow github.com to install the extension.
-3. Click **“Continue to Installation”** to install the extension, then **“Add”**.
+1. Download the latest release ZIP file from the [Releases page](../../releases/latest).
+2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
+3. Click **"Load Temporary Add-on"** and select the `StudydriveDownload-phawdk-[version].zip` file.
 
-If you don't see the pop-up:
-- Download the XPI file to your computer.
-- Open Firefox and go to `about:addons`.
-- Click on the gear icon and select **“Install Add-on From File...”**.
-- Select the downloaded XPI file to install it.
-
+> [!NOTE]
+> Firefox will unload the extension when the browser is closed.
 <br>
 <br>
 

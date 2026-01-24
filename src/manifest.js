@@ -28,14 +28,6 @@ const manifest = {
   host_permissions: [INJECT_URL],
   homepage_url: "https://github.com/phawdk/studydrive-download",
   permissions: ["scripting", "storage", "downloads"],
-  browser_specific_settings: {
-    gecko: {
-      id: "studydrive-download@phawdk.main.example",
-      data_collection_permissions: {
-        required: ["none"]
-      }
-    }
-  },
   content_scripts: [
     {
       matches: [INJECT_URL],
@@ -73,7 +65,18 @@ if (IS_CHROME) {
   manifest.externally_connectable = {
     matches: [INJECT_URL],
   };
+} else {
+  // AKA FIREFOX
+  manifest.browser_specific_settings = {
+    gecko: {
+      id: "studydrive-download@phawdk.main.example",
+      data_collection_permissions: {
+        required: ["none"]
+      }
+    }
+  };
 }
 
 export default manifest;
+
 

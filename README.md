@@ -54,7 +54,7 @@ The download button on Studydrive has been replaced. You can also download the P
    or Extensions Icon > `Manage Extensions`.
 4. Enable **Developer mode** (top right toggle in Chrome, perhaps somewhere else in other browsers).
 5. **Drag and drop the ZIP file** directly onto the extensions page,  
-   or click **“Load unpacked”** and select the downloaded and extracted zip file/folder (`StudydriveDownload-phawdk-chrome-[version]`).
+   or click **"Load unpacked"** and select the downloaded and extracted zip file/folder (`StudydriveDownload-phawdk-chrome-[version]`).
   
 <br>
 <br>
@@ -62,14 +62,14 @@ The download button on Studydrive has been replaced. You can also download the P
 ### 🦊 Firefox
 
 1. Click on the latest release XPI file from the [Releases page](../../releases/latest).
-2. This should trigger a pop-up in Firefox (top right) asking you to allow github.com to install the extension.
-3. Click **“Continue to Installation”** to install the extension, then **“Add”**.
+1. This should trigger a pop-up in Firefox (top right) asking you to allow github.com to install the extension.
+1. Click **"Continue to Installation"** to install the extension, then **"Add"**.
 
 If you don't see the pop-up:
-- Download the XPI file to your computer.
-- Open Firefox and go to `about:addons`.
-- Click on the gear icon and select **“Install Add-on From File...”**.
-- Select the downloaded XPI file to install it.
+1. Download the XPI file to your computer.
+1. Open Firefox and go to `about:addons`.
+1. Click on the gear icon and select **"Install Add-on From File..."**.
+1. Select the downloaded XPI file to install it.
 
 <br>
 <br>
@@ -81,6 +81,7 @@ If you don't see the pop-up:
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit your changes.
+
 
 
 

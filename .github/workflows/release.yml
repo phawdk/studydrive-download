@@ -21,7 +21,7 @@ jobs:
     env:
       VERSION: ${{ github.event.inputs.version }}
       CHROME_ZIP_FILE: StudydriveDownload-phawdk-chrome-${{ github.event.inputs.version }}.zip
-      FIREFOX_ZIP_FILE: StudydriveDownload-phawdk-firefox-${{ github.event.inputs.version }}.zip
+      FIREFOX_XPI_FILE: StudydriveDownload-phawdk-firefox-${{ github.event.inputs.version }}.xpi
 
     steps:
       - name: Checkout code
@@ -46,17 +46,20 @@ jobs:
       - name: Build Firefox extension
         run: npm run build:firefox
 
-      - name: Zip Firefox build output
+      - name: Sign Firefox extension using web-ext
+        env:
+          JWT_ISSUER: ${{ secrets.JWT_ISSUER }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: |
-          cd dist
-          zip -r ../$FIREFOX_ZIP_FILE .
+          npx web-ext sign --channel=unlisted --api-key=$JWT_ISSUER --api-secret=$JWT_SECRET --source-dir=dist --artifacts-dir=./firefox-dist
+          cp firefox-dist/*.xpi ./$FIREFOX_XPI_FILE
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ env.VERSION }}
           name: v${{ env.VERSION }}
-          files: ${{ env.CHROME_ZIP_FILE }}, ${{ env.FIREFOX_ZIP_FILE }}
+          files: ${{ env.CHROME_ZIP_FILE }}, ${{ env.FIREFOX_XPI_FILE }}
           body: |
             ## 🚀 Download the browser extensions below:
             
